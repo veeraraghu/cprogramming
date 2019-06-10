@@ -1,4 +1,3 @@
-
 #include<stdio.h>
 #include<stdlib.h>
 struct player 
@@ -6,6 +5,17 @@ struct player
 	char n[100];
 	int score;
 };
+int input(int ,struct player p[100]);	
+int calculate(struct player p[100],int );
+void display(int ,int ,struct player p[100]);																																													
+int main()
+{
+	struct player p[100];
+	int n=input(n,p);
+        int d= calculate(p,n);
+	display(d,n,p);
+
+}
 int input(int n,struct player p[100])
 {
 	printf("enter number of players\n");
@@ -51,12 +61,4 @@ void display(int h,int n,struct player p[100])
 		if(h==p[i].score)
 	        printf("the winner is %s \n",p[i].n);
 	}
-}																																																		
-int main()
-{
-	struct player p[100];
-	int n=input(n,p);
-        int d= calculate(p,n);
-	display(d,n,p);
-
-}
+}																											
